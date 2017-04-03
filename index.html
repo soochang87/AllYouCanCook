@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Include jQuery -->
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+
+    <!-- Custom javascript files will come here -->
+
+    <!-- jQuery css files -->
+    <link rel="stylesheet" href="css/lib/jquery.mobile-1.4.5.css"/>
+
+    <!-- Custom css files-->
+    <link rel="stylesheet" href="css/myStyle.css"/>
+
+</head>
+<body>
+
+<!-- Main page -->
+
+<div data-role="page" id="pgMain">
+    <header data-role="header" data-theme="b"  data-position="fixed">
+        <h2>All You Can Make</h2>
+        <div data-role="navbar">
+            <ul>
+                <li><a data-theme="a" href="#pgMain" data-icon="home" class="ui-btn-active ui-state-persist">Main Page</a></li>
+                <li><a data-theme="a" href="#pgShowRecipes" data-icon="heart">Recipes</a></li>
+                <li><a data-theme="a" href="#pgShoppingList" data-icon="shop">Shopping List</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+    </section>
+    <footer data-role="footer" data-theme="b"  data-position="fixed">
+        <h2>&copy;Almas Khan, Soochang Kim, 2017</h2>
+    </footer>
+</div>
+
+<!-- Recipe page to display all resigtered recipes -->
+
+<div data-role="page" id="pgShowRecipes">
+    <header data-role="header" data-theme="b"  data-position="fixed">
+        <h2>All You Can Make</h2>
+        <div data-role="navbar">
+            <ul>
+                <li><a data-theme="a" href="#pgMain" data-icon="home">Main Page</a></li>
+                <li><a data-theme="a" href="#pgShowRecipes" data-icon="heart" class="ui-btn-active ui-state-persist">Recipes</a></li>
+                <li><a data-theme="a" href="#pgShoppingList" data-icon="shop">Shopping List</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <div id="lstRecipe">
+            <!-- Recipe will load dynamically -->
+        </div>
+    </section>
+    <footer data-role="footer" data-theme="b"  data-position="fixed">
+        <h2>&copy;Almas Khan, Soochang Kim, 2017</h2>
+    </footer>
+</div>
+
+<!-- Recipe detail page -->
+
+<div data-role="page" id="pgRecipeDetail">
+    <header data-role="header" data-theme="b"  data-position="fixed">
+        <h2 id="titleRecipeDetail">Details</h2>
+        <div data-role="navbar">
+            <ul>
+                <li><a data-theme="a" href="#pgMain" data-icon="home">Main Page</a></li>
+                <li><a data-theme="a" href="#pgShowRecipes" data-icon="heart" class="ui-btn-active ui-state-persist">Recipes</a></li>
+                <li><a data-theme="a" href="#pgShoppingList" data-icon="shop">Shopping List</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <div id="ingredient">
+
+        </div>
+        <div id="instruction">
+
+        </div>
+        <!-- Recipe details will come dynamically-->
+    </section>
+    <footer data-role="footer" data-theme="b"  data-position="fixed">
+        <h2>&copy;Almas Khan, Soochang Kim, 2017</h2>
+    </footer>
+</div>
+
+<!-- Post recipe page  -->
+
+<div data-role="page" id="pgPostRecipe">
+    <header data-role="header" data-theme="b"  data-position="fixed">
+        <h2>Post your own recipe</h2>
+        <div data-role="navbar">
+            <ul>
+                <li><a data-theme="a" href="#pgMain" data-icon="home">Main Page</a></li>
+                <li><a data-theme="a" href="#pgShowRecipes" data-icon="heart" class="ui-btn-active ui-state-persist">Recipes</a></li>
+                <li><a data-theme="a" href="#pgShoppingList" data-icon="shop">Shopping List</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <!-- Post form will come here-->
+    </section>
+    <footer data-role="footer" data-theme="b"  data-position="fixed">
+        <h2>&copy;Almas Khan, Soochang Kim, 2017</h2>
+    </footer>
+</div>
+
+<!-- Shopping list page to display shipping list that user add -->
+
+<div data-role="page" id="pgShoppingList">
+    <header data-role="header" data-theme="b"  data-position="fixed">
+        <h2>All You Can Make</h2>
+        <div data-role="navbar">
+            <ul>
+                <li><a data-theme="a" href="#pgMain" data-icon="home">Main Page</a></li>
+                <li><a data-theme="a" href="#pgShowRecipes" data-icon="heart">Recipes</a></li>
+                <li><a data-theme="a" href="#pgShoppingList" data-icon="shop" class="ui-btn-active ui-state-persist">Shopping List</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+    </section>
+    <footer data-role="footer" data-theme="b"  data-position="fixed">
+        <h2>&copy;Almas Khan, Soochang Kim, 2017</h2>
+    </footer>
+</div>
+<!-- Further develpement for gorcery -->
+<!--<div data-role="page" id="pgGorceryMap">-->
+    <!--<header data-role="header" data-theme="b"  data-position="fixed">-->
+        <!--<h2>All You Can Make</h2>-->
+        <!--<div data-role="navbar">-->
+            <!--<ul>-->
+                <!--<li><a data-theme="a" data-icon="home">Main Page</a></li>-->
+                <!--<li><a data-theme="a" data-icon="heart">Recipes</a></li>-->
+                <!--<li><a data-theme="a" data-icon="shop" class="ui-btn-active ui-state-persist">Shopping List</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!--<section data-role="content">-->
+    <!--</section>-->
+    <!--<footer data-role="footer" data-theme="b"  data-position="fixed">-->
+        <!--<h2>&copy;Almas Khan, Soochang Kim, 2017</h2>-->
+    <!--</footer>-->
+<!--</div>-->
+
+</body>
+</html>
