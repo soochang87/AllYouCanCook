@@ -34,7 +34,7 @@ var DB = {
                 console.error("Error transaction");
                 console.error(e.message);
             }
-//HAHHAHAHAH
+
             var options = [];
             var sql = "CREATE TABLE IF NOT EXISTS recipe(" +
                 "id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, " +
