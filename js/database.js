@@ -40,7 +40,7 @@ var DB = {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "title VARCHAR(32) NOT NULL," +
                 "category VARCHAR(32) NOT NULL," +
-                "direction VARCHAR(1000) NOT NULL ," +
+                "direction VARCHAR(1024) NOT NULL ," +
                 "name VARCHAR(32)," +
                 "website VARCHAR(255));";
 
