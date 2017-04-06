@@ -3,28 +3,12 @@
  */
 
 // Global classes
-function pgShowRecipes_pagebeforeshow(){
-    showAllRecipes();
+
+
+function btnRecipePost_click() {
+    addRecipe();
 }
 
-function btnCancel_click(){
-    navigateNewPage("pgShowRecipes");
-}
-
-function btnSubmit_click(){
-    postRecipe();
-}
-
-function btnRecipePost_click(){
-    navigateNewPage("pgPostRecipe");
-}
-
-function init() {
-    $("#btnRecipePost").on("click", btnRecipePost_click);
-    $("#btnSubmit").on("click", btnSubmit_click);
-    $("#btnCancel").on("click", btnCancel_click);
-    $("#pgShowRecipes").on("pagebeforeshow", pgShowRecipes_pagebeforeshow);
-}
 
 function initDB() {
     try {
@@ -36,6 +20,15 @@ function initDB() {
     catch (e) {
         cosole.error("Fail: " + e.message);
     }
+}
+function pgShoppingList_show() {
+    $("#lblRecipe").text(getRecipeWhichIngredientIsSelected());
+    $("#btnRecipePost").on("click", btnRecipePost_click);
+}
+
+function init() {
+    $("#pgShoppingList").on("pageshow", pgShoppingList_show);
+
 }
 
 $(document).ready(function () {
