@@ -5,6 +5,11 @@
 // Global classes
 
 
+function btnRecipePost_click() {
+    addRecipe();
+}
+
+
 function initDB() {
     try {
         DB.createDatabase();
@@ -16,8 +21,13 @@ function initDB() {
         cosole.error("Fail: " + e.message);
     }
 }
+function pgShoppingList_show() {
+    $("#lblRecipe").text(getRecipeWhichIngredientIsSelected());
+    $("#btnRecipePost").on("click", btnRecipePost_click);
+}
 
 function init() {
+    $("#pgShoppingList").on("pageshow", pgShoppingList_show);
 
 }
 
