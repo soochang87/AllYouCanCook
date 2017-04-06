@@ -49,7 +49,9 @@ var DB = {
             sql =
                 "CREATE TABLE IF NOT EXISTS ingredient(" +
                 "id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL," +
-                "description VARCHAR(32) NOT NULL);";
+                "description VARCHAR(32) NOT NULL)," +
+                "recipe_id INTEGER NOT NULL," +
+                "FOREIGN KEY(recipe_id) REFERENCES recipe(id));";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
             sql =
