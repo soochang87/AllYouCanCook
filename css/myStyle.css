@@ -1,3 +1,5 @@
 label.error{
     color:red;
 }
+.selectedItem { text-decoration: line-through; }
+.notselectedItem{text-decoration: none;}

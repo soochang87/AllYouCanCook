@@ -52,15 +52,16 @@ var DB = {
                 "description VARCHAR(32) NOT NULL);";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
-            
+
 
 
             sql =
                 "CREATE TABLE IF NOT EXISTS shopping_list(" +
                 "recipe_id INTEGER NOT NULL," +
-                "ingredient_id INTEGER NOT NULL," +
-                "FOREIGN KEY(recipe_id) REFERENCES recipe(id)," +
-                "FOREIGN KEY(ingredient_id) REFERENCES ingredient(id));";
+                "ingredient_id INTEGER NOT NULL;";
+                    //Commented  by Almas to check shopping page
+                /*"FOREIGN KEY(recipe_id) REFERENCES recipe(id)," +
+                "FOREIGN KEY(ingredient_id) REFERENCES ingredient(id));";*/
 
             tx.executeSql(sql, options, successHandler, errorHandler);
         }

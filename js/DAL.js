@@ -52,6 +52,7 @@ var ShoppingList = {
                 "INSERT INTO shopping_list(recipe_id, ingredient_id) VALUES(?,?);";
             tx.executeSql(sql, options, successSqlExecution, errorSqlExecution);
         }
+        console.info("added to shoping list");
         db.transaction(txFunction, errorTransaction, successTransaction);
     },
     delete: function(){
@@ -64,6 +65,7 @@ var ShoppingList = {
     selectAll: function(successHandler){
         function txFunction(tx){
             var sql = "SELECT * FROM shopping_list;";
+            var options =[];
             tx.executeSql(sql, options, successHandler, errorSqlExecution);
         }
         db.transaction(txFunction, errorTransaction, successTransaction);

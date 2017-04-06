@@ -20,9 +20,11 @@ function initDB() {
     }
 }
 function pgShoppingList_show() {
-    $("#lblRecipe").text(getRecipeWhichIngredientIsSelected());
+    $("#lblRecipe").text("Spring roll");
+    getShoppingList();
 
 }
+
 
 function init() {
     $("#pgShoppingList").on("pageshow", pgShoppingList_show);
