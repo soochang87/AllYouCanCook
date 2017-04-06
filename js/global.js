@@ -25,7 +25,7 @@ function pgShoppingList_show() {
     $("#lblRecipe").text(getRecipeWhichIngredientIsSelected());
     $("#btnRecipePost").on("click", btnRecipePost_click);
 }
-///asdfas
+
 function init() {
     $("#pgShoppingList").on("pageshow", pgShoppingList_show);
 
