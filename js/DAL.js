@@ -8,7 +8,6 @@ var Recipe = {
             var sql =
                 "INSERT INTO recipe(title, category, direction, name, website)" +
                 "VALUES(?,?,?,?,?);";
-
             tx.executeSql(sql, options, successSqlExecution, errorSqlExecution);
         }
         db.transaction(txFunction, errorTransaction, successTransaction);
@@ -30,14 +29,14 @@ var Recipe = {
         }
         db.transaction(txFunction, errorTransaction, successTransaction);
     },
-    select: function(successHandler){
+    selectAll: function(successHandler){
         function txFunction(tx){
             var sql = "SELECT * FROM recipe;";
             tx.executeSql(sql, [], successHandler, errorSqlExecution);
         }
         db.transaction(txFunction, errorTransaction, successTransaction);
     },
-    selectAll: function(options, successHandler){
+    select: function(options, successHandler){
         function txFunction(tx){
             var sql = "SELECT * FROM recipe WHERE id=?";
             tx.executeSql(sql, options, successHandler, errorSqlExecution);
