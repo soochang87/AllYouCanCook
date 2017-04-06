@@ -5,9 +5,7 @@
 // Global classes
 
 
-function btnRecipePost_click() {
-    addRecipe();
-}
+
 
 
 function initDB() {
@@ -23,7 +21,7 @@ function initDB() {
 }
 function pgShoppingList_show() {
     $("#lblRecipe").text(getRecipeWhichIngredientIsSelected());
-    $("#btnRecipePost").on("click", btnRecipePost_click);
+
 }
 
 function init() {

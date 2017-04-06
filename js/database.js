@@ -52,21 +52,7 @@ var DB = {
                 "description VARCHAR(32) NOT NULL);";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
-            sql =
-                "CREATE TABLE IF NOT EXISTS category(" +
-                "category_id INTEGER AUTO_INCREMENT PRIMARY KEY  NOT NULL," +
-                "category_name VARCHAR(20) NOT NULL);";
-
-            tx.executeSql(sql, options, successHandler, errorHandler);
-
-            var sqlArray = new Array();
-            sqlArray.push("INSERT INTO type(name) values('Canadian');");
-            sqlArray.push("INSERT INTO type(name) values('Asian');");
-            sqlArray.push("INSERT INTO type(name) values('Others');");
-            for (var i=0; i < sqlArray.length; i++){
-                tx.executeSql(sqlArray[i], options, successCreate, errorHandler);
-
-            }
+            
 
 
             sql =
