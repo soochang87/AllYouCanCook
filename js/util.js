@@ -19,3 +19,7 @@ function successTransaction(){
 function errorTransaction(error){
     console.error(error.message);
 }
+
+function navigateNewPage(pageId){
+    $(location).attr("href", "#"+pageId);
+}

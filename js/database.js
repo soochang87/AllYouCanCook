@@ -37,12 +37,12 @@ var DB = {
 
             var options = [];
             var sql = "CREATE TABLE IF NOT EXISTS recipe(" +
-                "id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, " +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "title VARCHAR(32) NOT NULL," +
                 "category VARCHAR(32) NOT NULL," +
                 "direction VARCHAR(1000) NOT NULL ," +
                 "name VARCHAR(32)," +
-                "website VARCHAR(32));";
+                "website VARCHAR(255));";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
 
@@ -71,8 +71,10 @@ var DB = {
 
             sql =
                 "CREATE TABLE IF NOT EXISTS shopping_list(" +
-                "recipe_id INTEGER AUTO_INCREMENT PRIMARY KEY  NOT NULL," +
-                "ingredient_id INTEGER NOT NULL);";
+                "recipe_id INTEGER NOT NULL," +
+                "ingredient_id INTEGER NOT NULL," +
+                "FOREIGN KEY(recipe_id) REFERENCES recipe(id)," +
+                "FOREIGN KEY(ingredient_id) REFERENCES ingredient(id));";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
         }
