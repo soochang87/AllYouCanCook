@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a59fe054-c49f-4a65-9d70-ca881450a0fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/myStyle.css" afterPath="$PROJECT_DIR$/css/myStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/DAL.js" afterPath="$PROJECT_DIR$/js/DAL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/database.js" afterPath="$PROJECT_DIR$/js/database.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/facade.js" afterPath="$PROJECT_DIR$/js/facade.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/global.js" afterPath="$PROJECT_DIR$/js/global.js" />
     </list>
@@ -26,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="60" />
+            <state relative-caret-position="180">
+              <caret line="151" column="33" lean-forward="false" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
               <folding>
                 <element signature="e#1735#1741#0" expanded="true" />
                 <element signature="e#2752#2758#0" expanded="true" />
@@ -52,8 +48,8 @@
       <file leaf-file-name="global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+            <state relative-caret-position="402">
+              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc;n#initDB#0" expanded="false" />
               </folding>
@@ -83,13 +79,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facade.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="facade.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/facade.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+            <state relative-caret-position="229">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
-                <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+                <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -98,8 +94,8 @@
       <file leaf-file-name="DAL.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/DAL.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="973">
-              <caret line="67" column="28" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+            <state relative-caret-position="92">
+              <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="67" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -146,9 +142,9 @@
         <option value="$PROJECT_DIR$/js/validation.js" />
         <option value="$PROJECT_DIR$/js/util.js" />
         <option value="$PROJECT_DIR$/js/database.js" />
-        <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/js/DAL.js" />
         <option value="$PROJECT_DIR$/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/facade.js" />
       </list>
@@ -306,7 +302,7 @@
       <workItem from="1491434545434" duration="3346000" />
       <workItem from="1491491212690" duration="1223000" />
       <workItem from="1491494831114" duration="69000" />
-      <workItem from="1491494991781" duration="8426000" />
+      <workItem from="1491494991781" duration="12227000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Completion for form part">
       <created>1491361030554</created>
@@ -350,11 +346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491495119349</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update shopping html page">
+      <created>1491503490440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491503490440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26868000" />
+    <option name="totallyTimeSpent" value="30669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -450,7 +453,7 @@
         <state relative-caret-position="34">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -537,7 +540,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,7 +599,7 @@
         <state relative-caret-position="85">
           <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,7 +676,7 @@
         <state relative-caret-position="102">
           <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -787,7 +790,7 @@
         <state relative-caret-position="34">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,6 +833,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc;n#initDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/DAL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -840,51 +871,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/global.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="180">
+          <caret line="151" column="33" lean-forward="false" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc;n#initDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/myStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/DAL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="973">
-          <caret line="67" column="28" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
+            <element signature="e#1735#1741#0" expanded="true" />
+            <element signature="e#2752#2758#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/facade.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        <state relative-caret-position="229">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc;n#getShoppingList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="60" />
-          <folding>
-            <element signature="e#1735#1741#0" expanded="true" />
-            <element signature="e#2752#2758#0" expanded="true" />
+            <element signature="n#!!doc;n#clearShoppingList#0" expanded="false" />
           </folding>
         </state>
       </provider>

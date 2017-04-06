@@ -24,10 +24,18 @@ function pgShoppingList_show() {
     getShoppingList();
 
 }
-
+function btnaddItem_click() {
+    addNewItemInShoppingList();
+}
+function btnclearItems_click() {
+    clearShoppingList();
+}
 
 function init() {
     $("#pgShoppingList").on("pageshow", pgShoppingList_show);
+    $("#btnaddItem").on("click", btnaddItem_click);
+    $("#btnclearItems").on("click", btnclearItems_click);
+
 
 }
 

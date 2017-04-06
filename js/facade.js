@@ -3,25 +3,33 @@
  */
 
 // Temporary examples
+function  clearShoppingList() {
+    ShoppingList.delete();
+    $(location).prop('href', "#pgMain");
 
+}
+function addNewItemInShoppingList() {
+
+
+}
 function getShoppingList() {
     function successHandler(tx, results){
         var htmlCode = "";
+        var recipeId="";
         for (var i = 0; i < results.rows.length; i++) {
             var row = results.rows[i];
             console.info(row);
-            htmlCode += "<li id='shoppingItem' data-icon='minus'><a data-row-id="+ row['ingredient_id'] +">" + row["ingredient_id"]+ "</a></li>";
+
+            htmlCode += "<h4>"+row['recipe_id']+"</h4><li id='shoppingItem' data-icon='minus'><a data-row-id="+ row['ingredient_id'] +">" + row["ingredient_id"]+ "</a></li>";
+
+
         }
         var lv = $("#shoppingList");
         lv = lv.html(htmlCode);
         lv.listview("refresh");
-        $("#shoppingList a").on("click", clickHandler);
-
-        function clickHandler() {
+        lv.children("li").children("a").on("click", function(){
             localStorage.setItem("ingredient_id", $(this).attr("data-row-id"));
-            //$("#shoppingItem").addClass("selectedItem");
-           var style = $("#shoppingItem").css('text-decoration');
-           console.info(style);
+            var style = $("#shoppingItem").css('text-decoration');
             if(style == 'none solid rgb(51, 51, 51)')
             {
                 console.info("inside if");
@@ -33,11 +41,9 @@ function getShoppingList() {
                 $("#shoppingItem").addClass("notselectedItem");
                 console.info("inside else");
             }
-        }
+        });
     }
     ShoppingList.selectAll(successHandler);
-
-
 }
 function postRecipe(){
     if(validate_frmRecipePost()){
