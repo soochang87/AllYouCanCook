@@ -3,12 +3,12 @@
  */
 
 var Recipe = {
-    insert: function(options){
+    insert: function(options, successHandler){
         function txFunction(tx){
             var sql =
                 "INSERT INTO recipe(title, category, direction, name, website)" +
                 "VALUES(?,?,?,?,?);";
-            tx.executeSql(sql, options, successSqlExecution, errorSqlExecution);
+            tx.executeSql(sql, options, successHandler, errorSqlExecution);
         }
         db.transaction(txFunction, errorTransaction, successTransaction);
     },
@@ -69,6 +69,25 @@ var ShoppingList = {
             tx.executeSql(sql, options, successHandler, errorSqlExecution);
         }
         db.transaction(txFunction, errorTransaction, successTransaction);
+    }
+};
+
+var Ingredient = {
+    insert: function(options){
+        function txFunction(tx){
+            var sql =
+                "INSERT INTO ingredient(name, quantity, recipe_id)" +
+                "VALUES(?,?,?);";
+            tx.executeSql(sql, options, successSqlExecution. errorSqlExecution);
+        }
+
+        db.transaction(txFunction, errorTransaction, successTransaction);
+    },
+    insertAll: function(id, name, quantity){
+        for(var i = 0; i < name.length; i++){
+            if(!isStringEmtpy(name[i]['value']) && !isStringEmtpy(quantity[i]['value']))
+                Ingredient.insert([name[i]['value'], quantity[i]['value'], id]);
+        }
     }
 };
 

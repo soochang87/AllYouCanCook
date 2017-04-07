@@ -4,7 +4,7 @@
 
 // Helper utilities
 
-function successSqlExecution(){
+function successSqlExecution(tx,success){
     console.info("Success: SQL");
 }
 
@@ -22,4 +22,32 @@ function errorTransaction(error){
 
 function navigateNewPage(pageId){
     $(location).attr("href", "#"+pageId);
+}
+
+function updateIngredients(group, sibling, it){
+    var parent = group.parent();
+    if (group.get(0) === parent.children(":last-child").get(0)) {
+        if($(it).val() != ""){
+            parent.append("<div>" +
+                "<label for='txtIngredients'>Ingredient</label>" +
+                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' " +
+                "name='txtIngredients[]' id='txtIngredients'/></div>" +
+                "<label for='txtQuantity'>Quantity</label>" +
+                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input " +
+                "type='text' name='txtQuantity[]' id='txtQuantity'/></div></div>");
+            var temp = parent.children(":last-child").children("div").children("input");
+            $(temp[0]).on("keyup",txtQuantity_keyup );
+            $(temp[1]).on("keyup", txtQuantity_keyup);
+        }
+    }
+    else if($(it).val() == "" && $(sibling).val() == ""){
+        group.remove();
+    }
+}
+
+function isStringEmtpy(str){
+    var result = false;
+    if(str === null || str === "")
+        result = true;
+    return result;
 }

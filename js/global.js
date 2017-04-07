@@ -45,24 +45,14 @@ function btnRecipePost_click(){
 
 function txtQuantity_keyup() {
     var group = $(this).parent().parent();
-    var parent = group.parent();
-    var sibling = group.children(":first-child").next();
+    var sibling = group.children("div").children("input")[0];
+    updateIngredients(group, sibling, this);
+}
 
-    if (group.get(0) === parent.children(":last-child").get(0)) {
-        if($(this).val() != ""){
-            parent.append("<div>" +
-                "<label for='txtIngredients'>Ingredient</label>" +
-                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' " +
-                "name='txtIngredients[]' id='txtIngredients'/></div>" +
-                "<label for='txtQuantity'>Quantity</label>" +
-                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input " +
-                "type='text' name='txtQuantity[]' id='txtQuantity'/></div></div>");
-            parent.children(":last-child#txtQuantity").on("change", txtQuantity_keyup);
-        }
-    }
-    else if($(this).val() == ""){
-        group.remove();
-    }
+function txtIngredients_keyup(){
+    var group = $(this).parent().parent();
+    var sibling = group.children("div").children("input")[1];
+    updateIngredients(group, sibling, this);
 }
 
 function init() {
@@ -74,6 +64,7 @@ function init() {
     $("#btnCancel").on("click", btnCancel_click);
     $("#pgShowRecipes").on("pagebeforeshow", pgShowRecipes_pagebeforeshow);
     $("#txtQuantity").on("keyup", txtQuantity_keyup);
+    $("#txtIngredients").on("keyup", txtIngredients_keyup);
 }
 
 $(document).ready(function () {

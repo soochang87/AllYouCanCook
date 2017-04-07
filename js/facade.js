@@ -8,10 +8,12 @@ function  clearShoppingList() {
     $(location).prop('href', "#pgMain");
 
 }
+
 function addNewItemInShoppingList() {
 
 
 }
+
 function getShoppingList() {
     function successHandler(tx, results){
         var htmlCode = "";
@@ -45,6 +47,7 @@ function getShoppingList() {
     }
     ShoppingList.selectAll(successHandler);
 }
+
 function postRecipe(){
     if(validate_frmRecipePost()){
         Recipe.insert([
@@ -53,7 +56,12 @@ function postRecipe(){
             $("#txtDirection").val(),
             $("#txtName").val(),
             $("#txtWebsite").val()
-        ]);
+        ], function(tx, results){
+            Ingredient.insertAll(results.insertId,
+                $("input[name^='txtIngredients']"),
+                $("input[name^='txtQuantity']"));
+        });
+
         navigateNewPage("pgShowRecipes");
     }
 }
