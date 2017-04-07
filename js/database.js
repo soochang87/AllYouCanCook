@@ -9,7 +9,6 @@ function success() {
     console.info("Success transaction");
 }
 
-
 var db;
 var DB = {
     createDatabase: function () {
@@ -49,16 +48,15 @@ var DB = {
             sql =
                 "CREATE TABLE IF NOT EXISTS ingredient(" +
                 "id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL," +
-                "description VARCHAR(32) NOT NULL);";
+                "name VARCHAR(32) NOT NULL," +
+                "quantity VARCHAR(32) NOT NULL);";
 
             tx.executeSql(sql, options, successHandler, errorHandler);
-
-
 
             sql =
                 "CREATE TABLE IF NOT EXISTS shopping_list(" +
                 "recipe_id INTEGER NOT NULL," +
-                "ingredient_id INTEGER NOT NULL;";
+                "ingredient_id INTEGER NOT NULL);";
                     //Commented  by Almas to check shopping page
                 /*"FOREIGN KEY(recipe_id) REFERENCES recipe(id)," +
                 "FOREIGN KEY(ingredient_id) REFERENCES ingredient(id));";*/

@@ -47,7 +47,7 @@ function getShoppingList() {
 }
 function postRecipe(){
     if(validate_frmRecipePost()){
-        var result = Recipe.insert([
+        Recipe.insert([
             $("#txtTitle").val(),
             $("#txtCategory").val(),
             $("#txtDirection").val(),

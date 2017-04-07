@@ -87,7 +87,6 @@
     </header>
     <section data-role="content">
         <div id="ingredient">
-
         </div>
         <div id="instruction">
         </div>
@@ -118,8 +117,15 @@
             <input type="text" name="txtTitle" id="txtTitle"/>
             <label for="txtCategory">Category</label>
             <input type="text" name="txtCategory" id="txtCategory"/>
-            <label for="txtIngredients">Ingredients</label>
-            <input type="text" name="txtIngredients" id="txtIngredients"/>
+            <div id="lblIngredients" class="ui-field-contain">
+                <label for="lblIngredients">Ingredients</label><br/><input type="hidden"/><br/>
+                <div>
+                    <label for="txtIngredients">Ingredient</label>
+                    <input type="text" name="txtIngredients[]" id="txtIngredients"/>
+                    <label for="txtQuantity">Quantity</label>
+                    <input type="text" name="txtQuantity[]" id="txtQuantity"/>
+                </div>
+            </div>
             <label for="txtDirection">Direction</label>
             <input type="text" name="txtDirection" id="txtDirection"/>
             <label for="txtWebsite">Website</label>
@@ -154,7 +160,9 @@
         </ul>
         <fieldset data-role="controlgroup" data-type="horizontal">
             <button type="button" id="btnaddItem" name="btnaddItem" class="ui-btn-active">ADD</button>
-            <button type="button" id="btnclearItems" name="btnclearItems" style="background-color: black; color:white;">CLEAR</button>
+            <button type="button" id="btnclearItems" name="btnclearItems" style="background-color: black; color:white;">
+                CLEAR
+            </button>
             <button type="button" id="btnGoShopping" name="btnGoShopping" class="ui-btn-active">GO TO SHOPPING</button>
         </fieldset>
     </section>

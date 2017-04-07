@@ -42,6 +42,29 @@ function btnSubmit_click(){
 function btnRecipePost_click(){
     navigateNewPage("pgPostRecipe");
 }
+
+function txtQuantity_keyup() {
+    var group = $(this).parent().parent();
+    var parent = group.parent();
+    var sibling = group.children(":first-child").next();
+
+    if (group.get(0) === parent.children(":last-child").get(0)) {
+        if($(this).val() != ""){
+            parent.append("<div>" +
+                "<label for='txtIngredients'>Ingredient</label>" +
+                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' " +
+                "name='txtIngredients[]' id='txtIngredients'/></div>" +
+                "<label for='txtQuantity'>Quantity</label>" +
+                "<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input " +
+                "type='text' name='txtQuantity[]' id='txtQuantity'/></div></div>");
+            parent.children(":last-child#txtQuantity").on("change", txtQuantity_keyup);
+        }
+    }
+    else if($(this).val() == ""){
+        group.remove();
+    }
+}
+
 function init() {
     $("#pgShoppingList").on("pageshow", pgShoppingList_show);
     $("#btnaddItem").on("click", btnaddItem_click);
@@ -50,6 +73,7 @@ function init() {
     $("#btnSubmit").on("click", btnSubmit_click);
     $("#btnCancel").on("click", btnCancel_click);
     $("#pgShowRecipes").on("pagebeforeshow", pgShowRecipes_pagebeforeshow);
+    $("#txtQuantity").on("keyup", txtQuantity_keyup);
 }
 
 $(document).ready(function () {
